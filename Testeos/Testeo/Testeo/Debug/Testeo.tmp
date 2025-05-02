@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Testeo\Testeo\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Testeo\Testeo\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Testeo\Testeo\Debug\Testeo.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Testeo.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Testeo.map</FILE>
+  <FILE>Testeo.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Testeo\Testeo\main.asm</FILE><LINE>26</LINE></RESET>
+  <MAIN><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Testeo\Testeo\main.asm</FILE><LINE>30</LINE></MAIN>
+  <RUTINA_ASR_1_POSICION><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Testeo\Testeo\main.asm</FILE><LINE>45</LINE></RUTINA_ASR_1_POSICION>
+ </LABELS>
+</ASSEMBLER_INFO>
