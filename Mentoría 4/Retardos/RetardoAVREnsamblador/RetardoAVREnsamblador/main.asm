@@ -22,12 +22,12 @@ RESET:
 
 ; --- Configuración de puertos ---
     ; Configurar PB1 como entrada (Switch) sin pull-up
-    cbi DDRB, 1
-    cbi PORTB, 1
+    cbi DDRB, 1   ;DDRB[1]=0   - comfogira a PB1 como input
+    cbi PORTB, 1  ;PORTB[1]=0  - desactiva el pull up, asi que estas obligado a crear un pull down fisico fuera del atmega
 
     ; Configurar PD1 como salida (LED)
-    sbi DDRD, 1
-    cbi PORTD, 1     ; Inicialmente LED apagado
+    sbi DDRD, 1      ; PD1 Como salida DDRD[1]=1
+    cbi PORTD, 1     ; Inicialmente LED apagado PD1=0
 
 ; --- Bucle principal ---
 MAIN:
@@ -58,9 +58,9 @@ DELAY_EXTERNO:
 DELAY_INTERMEDIO:
         LDI Rinterno, 250
 DELAY_INTERNO:
-            NOP
-            DEC Rinterno
-            BRNE DELAY_INTERNO
+            NOP   ;consume 1 ciclo de reloj
+            DEC Rinterno  ;consume un ciclo de reloj
+            BRNE DELAY_INTERNO ;(z!=0), si=> continua en el bucle, else=>sale. El si, cuesta 2 ciclos de reloj
         DEC Rintermedio
         BRNE DELAY_INTERMEDIO
     DEC Rexterno

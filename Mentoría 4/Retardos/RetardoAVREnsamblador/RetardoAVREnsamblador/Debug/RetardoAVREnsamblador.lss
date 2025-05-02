@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Mentoría 4\Retardos\RetardoAVREnsamblador\RetardoAVREnsamblador\main.asm Fri May 02 08:57:52 2025
+AVRASM ver. 2.2.8  C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Mentoría 4\Retardos\RetardoAVREnsamblador\RetardoAVREnsamblador\main.asm Fri May 02 12:11:27 2025
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Mentoría 4\Retardos\RetardoAVREnsamblador\RetardoAVREnsamblador\main.asm(5): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
@@ -1053,12 +1053,12 @@ C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Mentoría 4\Re
                                  
                                  ; --- Configuración de puertos ---
                                      ; Configurar PB1 como entrada (Switch) sin pull-up
-000005 9821                          cbi DDRB, 1
-000006 9829                          cbi PORTB, 1
+000005 9821                          cbi DDRB, 1   ;DDRB[1]=0   - comfogira a PB1 como input
+000006 9829                          cbi PORTB, 1  ;PORTB[1]=0  - desactiva el pull up, asi que estas obligado a crear un pull down fisico fuera del atmega
                                  
                                      ; Configurar PD1 como salida (LED)
-000007 9a51                          sbi DDRD, 1
-000008 9859                          cbi PORTD, 1     ; Inicialmente LED apagado
+000007 9a51                          sbi DDRD, 1      ; PD1 Como salida DDRD[1]=1
+000008 9859                          cbi PORTD, 1     ; Inicialmente LED apagado PD1=0
                                  
                                  ; --- Bucle principal ---
                                  MAIN:
@@ -1089,9 +1089,9 @@ C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Mentoría 4\Re
                                  DELAY_INTERMEDIO:
 000017 ef2a                              LDI Rinterno, 250
                                  DELAY_INTERNO:
-000018 0000                                  NOP
-000019 952a                                  DEC Rinterno
-00001a f7e9                                  BRNE DELAY_INTERNO
+000018 0000                                  NOP   ;consume 1 ciclo de reloj
+000019 952a                                  DEC Rinterno  ;consume un ciclo de reloj
+00001a f7e9                                  BRNE DELAY_INTERNO ;(z!=0), si=> continua en el bucle, else=>sale. El si, cuesta 2 ciclos de reloj
 00001b 951a                              DEC Rintermedio
 00001c f7d1                              BRNE DELAY_INTERMEDIO
 00001d 950a                          DEC Rexterno

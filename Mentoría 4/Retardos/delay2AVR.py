@@ -1,3 +1,7 @@
+#INPUT: Frecuencia de tu reloj = 1MHz
+#INPUT: El delay deseado = 1Segundo
+#OUTPUT: El valor de los registros Rexterno, RintermediO, Rinterno
+
 def calcular_retardo_max_10_nops(FrecuenciaReloj, delayDeseado):
     T_ciclo = 1 / FrecuenciaReloj
     max_nops = 10
@@ -57,5 +61,5 @@ def calcular_retardo_max_10_nops(FrecuenciaReloj, delayDeseado):
         return None
 
 
-resultado = calcular_retardo_max_10_nops(1e6, 1.0)  # 1 segundo
+resultado = calcular_retardo_max_10_nops(1e6, 1.0)  # 1MHz,  1 segundo
 print(resultado)
