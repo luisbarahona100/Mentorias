@@ -5,21 +5,24 @@
 
 //RUTINA ASR (Aithmetic Shift Right)
 void asr16(int16_t *value, uint8_t n) {
-	for (uint8_t i = 0; i < n; i++) {
+	uint8_t i = 0;
+	while (i < n) {
 		// Realizar desplazamiento aritmético
 		// Convertimos el número en una variable temporal
 		int16_t temp = *value;
 
 		// Desplazamiento aritmético: replicar el bit de signo
 		*value = (temp >> 1) | (temp & 0x8000);
+		
+		i=i+1;
 	}
 }
 
 int main(void) {
 	// Simulación del comportamiento del código ensamblador
-
-	int16_t num = 0b0110000000010000;  // Equivale a R17:R16 = 0x60:0x10
-	uint8_t shifts = 2;
+	//Dividir 1024/1024 = 1. Esto equivale a operar 1024>>10 = 8.
+	int16_t num = 0b0000010000000000;  // Equivale a R17:R16 = 0x04:0x00
+	uint8_t shifts = 10;                //Se necesitan 10 desplazamientos porque 2^10=1024
 
 	asr16(&num, shifts);  // Desplazar 2 veces aritméticamente a la derecha
 

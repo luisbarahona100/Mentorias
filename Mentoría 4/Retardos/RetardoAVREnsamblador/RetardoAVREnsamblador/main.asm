@@ -52,9 +52,9 @@ TOGGLE_LED:
 
 ; --- Subrutina: Delay aproximado de 1 segundo ---
 DELAY1SEG:
-    LDI Rexterno, 4
+    LDI Rexterno, 1
 DELAY_EXTERNO:
-    LDI Rintermedio, 250
+    LDI Rintermedio, 125
 DELAY_INTERMEDIO:
         LDI Rinterno, 250
 DELAY_INTERNO:

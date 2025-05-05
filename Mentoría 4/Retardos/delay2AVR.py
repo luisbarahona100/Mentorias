@@ -4,7 +4,7 @@
 
 def calcular_retardo_max_10_nops(FrecuenciaReloj, delayDeseado):
     T_ciclo = 1 / FrecuenciaReloj
-    max_nops = 10
+    max_nops = 4 #10
     max_reg = 256  # registros de 8 bits
 
     mejor_error = float('inf')
@@ -61,5 +61,5 @@ def calcular_retardo_max_10_nops(FrecuenciaReloj, delayDeseado):
         return None
 
 
-resultado = calcular_retardo_max_10_nops(1e6, 1.0)  # 1MHz,  1 segundo
+resultado = calcular_retardo_max_10_nops(1000000, 0.000100)  # f=1MHz,  delaydeseado= 1 segundo
 print(resultado)

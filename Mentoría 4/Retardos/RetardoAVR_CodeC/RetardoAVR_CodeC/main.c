@@ -11,7 +11,7 @@
 
 // Subrutina para cambiar el estado del LED
 void toggle_led(void) {
-	PIND = (1 << PD1);  // Alterna el bit PD1 (toggle)
+	PIND = ^(1 << PD1);  // Alterna el bit PD1 (toggle)
 }
 
 // Subrutina de delay de ~1 segundo

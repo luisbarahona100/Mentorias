@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\Debug\Punteros_Z_X.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Punteros_Z_X.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Punteros_Z_X.map</FILE>
+  <FILE>Punteros_Z_X.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\main.asm</FILE><LINE>5</LINE></MAIN>
+  <GRABAR_En_Z><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\main.asm</FILE><LINE>16</LINE></GRABAR_En_Z>
+  <COPIAR_Z_To_X><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\main.asm</FILE><LINE>29</LINE></COPIAR_Z_To_X>
+  <GRABAR><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\main.asm</FILE><LINE>19</LINE></GRABAR>
+  <COPIAR><FILE>C:\Users\luisdavidbarahona\Documents\barahona_2025_marzo\Mentorias\Otros\SRAM_manipulation\Punteros_Z_X\Punteros_Z_X\main.asm</FILE><LINE>35</LINE></COPIAR>
+ </LABELS>
+</ASSEMBLER_INFO>
